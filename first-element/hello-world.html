@@ -1,0 +1,53 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="hello-world">
+  <template>
+    <style>
+        :host {
+            background-color: #0ba6de;
+            padding: 5px 10px;
+            color: aliceblue;
+            font-family: sans-serif;
+            display: block;
+            border-radius: 6px;
+            text-align: center;
+        }
+        h2{
+            font-weight: bold;
+        }
+    </style>
+    <!-- La primera parte del web component-->
+
+    <!--<h2>Hello [[prop1]]</h2>-->
+
+    <!-- La segunda parte del web component utilizando "content"-->
+
+    <!--<p>
+        <content></content>
+    </p>-->
+
+    <!-- La tercera parte del web component utilizando "select"-->
+    <h1><content select=".text1"></content></h1>
+    <h2>
+        <Content select=".text2"></Content>
+    </h2>
+    <p>
+        <content select=".text3"></content>
+    </p>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'hello-world',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'hello-world',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

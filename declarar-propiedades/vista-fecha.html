@@ -1,0 +1,65 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="vista-fecha">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+            div{
+                background-color: #ededed;
+                padding: 5px;
+                width: 500px;
+                text-align: center;
+                -webkit-box-shadow: 0px 2px 22px -5px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 2px 22px -5px rgba(0,0,0,0.75);
+                box-shadow: 0px 2px 22px -5px rgba(0,0,0,0.75);
+                margin:0 auto;
+                margin-top: 25px;
+            }
+            span{
+                display: block;
+                padding: 2px;
+            }
+            .mes{
+                font-size: 1em;
+                background-color: #6fbce8;
+                color: white;
+                border-radius: 5px;
+            }
+            .dia{
+                font-size: 2.2em;
+            }
+            .mes{
+                font-size: 0.9em;
+            }
+        </style>
+        <div>
+            <span class="mes">{{mes}}</span>
+            <span class="dia">{{dia}}</span>
+            <span class="ano">{{ano}}</span>
+        </div>
+    </template>
+    <script>
+        (function() {
+            Polymer({
+                is: 'vista-fecha',
+
+                properties: {
+                    mes: {
+                        type: String,
+                        value: 'enero'
+                    },
+                    dia: {
+                        type: Number,
+                        value: 1
+                    },
+                    ano: {
+                        type: Number,
+                        value: 2016
+                    }
+                }
+            });
+        })();
+    </script>
+</dom-module>
